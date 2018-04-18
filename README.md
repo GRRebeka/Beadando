@@ -15,3 +15,15 @@ morse_abc={'A': '.-', 'B': '-...', 'C': '-.-.',
 '?':'..--..', '/':'-..-.', '-':'-....-',
 '(':'-.--.', ')':'-.--.-'}
 
+def encode(szoveg):
+    ncode=""
+    szoveg=szoveg.upper()
+    for char in szoveg:
+        ncode += morse_abc[char]+ ' '
+    print(ncode)
+
+
+
+
+szoveg=input("Add meg a mondatot: ")
+encode(szoveg)
