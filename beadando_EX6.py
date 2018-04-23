@@ -1,6 +1,6 @@
 
 ###Write a program that automatically converts English text to Morse code and vice versa###
-###Írj egy olyan programot, amely automatikusan átalakítja az angol szöveget Morse-kódra és fordítva###
+
 
 
 morse_abc={'A': '.-', 'B': '-...', 'C': '-.-.',
@@ -31,10 +31,16 @@ def encode(eng_text):
     print(ncode)
 
 
-#def decode(morse_code):
+def decode(morse_code):
 
 
 
-letter=input("Add meg a mondatot: ")
-encode(letter)
-
+translate=input(print(('Mit szeretnel forditani: morse or english?')))
+if translate=='morse':
+    m_code= input("Add meg a morse codot: ")
+    decode(m_code)
+elif translate=='english':
+    letter = input("Add meg a mondatot: ")
+    encode(letter)
+else:
+    print('Nem birom lefordítani!')
