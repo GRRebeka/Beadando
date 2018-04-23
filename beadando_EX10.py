@@ -14,12 +14,8 @@ def osztas():
         if db==10:
             return szam
         szam+=1
-    print(szam)
-    print(db)
 
-
-
-osztas()
+print(osztas())
 
 
 
