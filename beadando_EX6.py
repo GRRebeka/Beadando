@@ -19,28 +19,35 @@ morse_abc={'A': '.-', 'B': '-...', 'C': '-.-.',
 '?':'..--..', '/':'-..-.', '-':'-....-',
 '(':'-.--.', ')':'-.--.-'}
 
-def encode(eng_text):
-    ncode=''
-    szoveg=eng_text.upper()
-    for szo in szoveg:
-        for betu in szo.split():
-            ncode +=morse_abc[betu]
-        ncode +='***'
+def encode(code):
+
+    szoveg=code.upper()
+    morse = ''
+    for i in szoveg:
+        for kulcs,ertek in morse_abc.items():
+            if i == kulcs:
+                morse+=ertek+' '
+
+    # for szo in szoveg:
+    #     for betu in szo.split(' '):
+    #         morse +=morse_abc[betu]
+    #     morse += '|'
+    print(morse)
 
 
-    print(ncode)
+def decode(code):
+
+    betu = code.split(' ')
+    eng_txt=''
+    for i in betu:
+        for kulcs,ertek in morse_abc.items():
+            if i == ertek:
+                eng_txt+=kulcs
+    print(eng_txt)
 
 
-def decode(morse_code):
-
-
-
-translate=input(print(('Mit szeretnel forditani: morse or english?')))
-if translate=='morse':
-    m_code= input("Add meg a morse codot: ")
-    decode(m_code)
-elif translate=='english':
-    letter = input("Add meg a mondatot: ")
-    encode(letter)
+code=input('Add meg a szoveget: ')
+if code[0]=='.' or code[0]=='-' :
+    decode(code)
 else:
-    print('Nem birom lefordítani!')
+    encode(code)
