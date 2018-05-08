@@ -36,13 +36,13 @@ def encode(code):
 
 
 def decode(code):
-
     betu = code.split(' ')
-    eng_txt=''
+    eng_txt = ''
     for i in betu:
-        for kulcs,ertek in morse_abc.items():
+        for kulcs, ertek in morse_abc.items():
             if i == ertek:
-                eng_txt+=kulcs
+                eng_txt += kulcs
+        eng_txt+=' '
     print(eng_txt)
 
 
