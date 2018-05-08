@@ -31,7 +31,7 @@ def encode(code):
     # for szo in szoveg:
     #     for betu in szo.split(' '):
     #         morse +=morse_abc[betu]
-    #     morse += '|'
+    #     morse += ' '
     print(morse)
 
 
