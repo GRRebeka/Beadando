@@ -22,7 +22,7 @@ def EX9(number):
         if number%i==0:
             if prim_e(i)=='Prim':
                 primek_is.append(i)
- 
+
     max = 0
     for pmax in primek_is:
         if pmax>max:
@@ -31,7 +31,5 @@ def EX9(number):
 
 
 EX9(600851475143)
-
-
 
 
