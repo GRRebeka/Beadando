@@ -5,11 +5,9 @@ def osztas_20():
     db=0
     szam = 20
     while db!=20:
-        if szam%20==0:
-            db=1
-            for i in range(1,20):
-                if szam%i==0:
-                    db+=1
+        for i in range(1,21):
+            if szam%i==0:
+                db+=1
         if db==20:
             return szam
         else:
