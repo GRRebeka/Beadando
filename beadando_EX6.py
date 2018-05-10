@@ -37,7 +37,6 @@ def decode(code):
         for kulcs, ertek in morse_abc.items():
             if i == ertek:
                 eng_txt += kulcs.upper()
-    print(eng_txt)
     print(eng_txt.capitalize())
 
 
