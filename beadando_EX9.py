@@ -1,8 +1,6 @@
 
 ###The prime factors of 13195 are 5, 7, 13 and 29. What is the largest prime factor of the number 600851475143 ?###
 
-
-
 def prim_e(szam):
     db=1
     if szam==2:
@@ -27,9 +25,9 @@ def EX9(number):
     for pmax in primek_is:
         if pmax>max:
             max = pmax
-    print('{} tha largest prim'.format(max))
+    print('{} the largest prim'.format(max))
 
 
+EX9(13195)
 EX9(600851475143)
-
 
