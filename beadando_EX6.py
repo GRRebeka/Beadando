@@ -32,11 +32,15 @@ def decode(code):
     betu = code.split(' ')
     eng_txt = ''
     for i in betu:
+        if i == '':
+            eng_txt += ' '
         for kulcs, ertek in morse_abc.items():
             if i == ertek:
-                eng_txt += kulcs
-        eng_txt += ' '
+                eng_txt += kulcs.upper()
     print(eng_txt)
+    print(eng_txt.capitalize())
+
+
 
 
 code=input('Add meg a szoveget: ')
