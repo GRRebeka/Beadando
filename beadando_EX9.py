@@ -15,19 +15,16 @@ def prim_e(szam):
 def EX9(number):
 
     primek_is = []
-
+    max=0
     for i in range(2,number):
         if number%i==0:
             if prim_e(i)=='Prim':
                 primek_is.append(i)
+                if i>max:
+                    max=i
+                print(primek_is)
 
-    max = 0
-    for pmax in primek_is:
-        if pmax>max:
-            max = pmax
     print('{} the largest prim'.format(max))
 
-
-EX9(13195)
 EX9(600851475143)
 
